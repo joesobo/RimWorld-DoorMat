@@ -38,7 +38,8 @@
 			<MarketValue>5</MarketValue>
 			<MaxHitPoints>50</MaxHitPoints>
 			<WorkToBuild>120</WorkToBuild>
-			<Mass>1</Mass>
+			<Mass>1.5</Mass>
+			<Comfort>0.2</Comfort>
 		</statBases>
 		<altitudeLayer>FloorCoverings</altitudeLayer>
 		<clearBuildingArea>false</clearBuildingArea>
@@ -60,7 +61,26 @@
 	<ThingDef Abstract="True" Name="LT_MatBaseChecker" ParentName="LT_MatBase">
 		<graphicData>
 			<texPath>Things/Building/DoorMatChecker</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
 		</graphicData>
+		<minifiedDef>MinifiedThing</minifiedDef>
+	</ThingDef>
+	
+	<ThingDef Abstract="True" Name="LT_MatBigBaseChecker" ParentName="LT_MatBase">
+		<graphicData>
+			<texPath>Things/Building/DoorMatBigChecker</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,1)</drawSize>
+		</graphicData>
+		<statBases>
+			<Beauty>2</Beauty>
+			<MarketValue>8</MarketValue>
+			<MaxHitPoints>80</MaxHitPoints>
+			<WorkToBuild>240</WorkToBuild>
+		</statBases>
+		<size>(2,1)</size>
+		<minifiedDef>MinifiedThing</minifiedDef>
 	</ThingDef>
 
 	<ThingDef Abstract="True" Name="LT_MatBigBase" ParentName="LT_MatBase">
@@ -76,6 +96,7 @@
 			<WorkToBuild>240</WorkToBuild>
 		</statBases>
 		<size>(2,1)</size>
+		<minifiedDef>MinifiedThing</minifiedDef>
 	</ThingDef>
 	<!-- End Abstracts -->
 
@@ -87,6 +108,19 @@
 			<li>Leathery</li>
 		</stuffCategories>
 		<costStuffCount>7</costStuffCount>
+		<minifiedDef>MinifiedThing</minifiedDef>
+	</ThingDef>
+	
+	<!-- lost to time -->
+	<ThingDef ParentName="LT_MatBaseChecker">
+		<defName>LT_DoorMatCheckerLeather</defName>
+		<label>checker doormat</label>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<costStuffCount>7</costStuffCount>
+		<minifiedDef>MinifiedThing</minifiedDef>
 	</ThingDef>
 
 	<ThingDef ParentName="LT_MatBigBase">
@@ -97,6 +131,19 @@
 			<li>Leathery</li>
 		</stuffCategories>
 		<costStuffCount>14</costStuffCount>
+		<minifiedDef>MinifiedThing</minifiedDef>
+	</ThingDef>
+	
+	<!-- lost to time -->
+	<ThingDef ParentName="LT_MatBigBaseChecker">
+		<defName>LT_DoorMatBigCheckerLeather</defName>
+		<label>large checker doormat</label>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<costStuffCount>14</costStuffCount>
+		<minifiedDef>MinifiedThing</minifiedDef>
 	</ThingDef>
 
 	<!-- Carpet Making -->
@@ -109,6 +156,7 @@
 			<li>CarpetMaking</li>
 		</researchPrerequisites>
 		<designatorDropdown>LT_Doormat_Small</designatorDropdown> <!-- dracoix added -->
+		<minifiedDef>MinifiedThing</minifiedDef>
 	</ThingDef>
 	
 	<ThingDef Abstract="True" ParentName="LT_MatBaseChecker" Name="LT_ClothMatBaseChecker">
@@ -118,6 +166,7 @@
 		<researchPrerequisites>
 			<li>CarpetMaking</li>
 		</researchPrerequisites>
+		<minifiedDef>MinifiedThing</minifiedDef>
 	</ThingDef>
 
 	<ThingDef Abstract="True" ParentName="LT_MatBigBase" Name="LT_ClothMatBigBase">
@@ -128,6 +177,7 @@
 			<li>CarpetMaking</li>
 		</researchPrerequisites>
 		<designatorDropdown>LT_Doormat_Big</designatorDropdown> <!-- dracoix added -->
+		<minifiedDef>MinifiedThing</minifiedDef>
 	</ThingDef>
 	<!-- End Abstracts -->
 
@@ -137,6 +187,7 @@
 		<graphicData>
 			<color>(118,49,57)</color>
 		</graphicData>
+		<minifiedDef>MinifiedThing</minifiedDef>
 	</ThingDef>
 
 	<ThingDef ParentName="LT_ClothMatBase">
@@ -145,6 +196,7 @@
 		<graphicData>
 			<color>(199,132,45)</color>
 		</graphicData>
+		<minifiedDef>MinifiedThing</minifiedDef>
 	</ThingDef>
 
 	<ThingDef ParentName="LT_ClothMatBase">
@@ -153,6 +205,7 @@
 		<graphicData>
 			<color>(89,105,62)</color>
 		</graphicData>
+		<minifiedDef>MinifiedThing</minifiedDef>
 	</ThingDef>
 
 	<ThingDef ParentName="LT_ClothMatBase">
@@ -161,6 +214,7 @@
 		<graphicData>
 			<color>(56,113,107)</color>
 		</graphicData>
+		<minifiedDef>MinifiedThing</minifiedDef>
 	</ThingDef>
 
 	<ThingDef ParentName="LT_ClothMatBase">
@@ -169,6 +223,7 @@
 		<graphicData>
 			<color>(24,65,121)</color>
 		</graphicData>
+		<minifiedDef>MinifiedThing</minifiedDef>
 	</ThingDef>
 
 	<!-- Bigs -->
@@ -179,6 +234,7 @@
 		<graphicData>
 			<color>(118,49,57)</color>
 		</graphicData>
+		<minifiedDef>MinifiedThing</minifiedDef>
 	</ThingDef>
 
 	<ThingDef ParentName="LT_ClothMatBigBase">
@@ -187,6 +243,7 @@
 		<graphicData>
 			<color>(199,132,45)</color>
 		</graphicData>
+		<minifiedDef>MinifiedThing</minifiedDef>
 	</ThingDef>
 
 	<ThingDef ParentName="LT_ClothMatBigBase">
@@ -195,6 +252,7 @@
 		<graphicData>
 			<color>(89,105,62)</color>
 		</graphicData>
+		<minifiedDef>MinifiedThing</minifiedDef>
 	</ThingDef>
 
 	<ThingDef ParentName="LT_ClothMatBigBase">
@@ -203,6 +261,7 @@
 		<graphicData>
 			<color>(56,113,107)</color>
 		</graphicData>
+		<minifiedDef>MinifiedThing</minifiedDef>
 	</ThingDef>
 
 	<ThingDef ParentName="LT_ClothMatBigBase">
@@ -211,5 +270,6 @@
 		<graphicData>
 			<color>(24,65,121)</color>
 		</graphicData>
+		<minifiedDef>MinifiedThing</minifiedDef>
 	</ThingDef>
 </Defs>

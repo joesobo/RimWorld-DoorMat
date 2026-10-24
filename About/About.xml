@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-    <name>Door Mat</name>
-	<packageId>dracoix.doormat.r12a</packageId>
-    <author>dracoix</author>
-    <url></url>
-    <supportedVersions>
-	<li>1.0</li>
-	<li>1.1</li>
-	<li>1.2</li>
-	<li>1.3</li>
-	<li>1.4</li>
-	<li>1.5</li>
-	<li>1.6</li>
-	</supportedVersions>
-    <description>ORIGINAL AUTHOR: Latta
-ORIGINAL WORKSHOP URL: https://steamcommunity.com/sharedfiles/filedetails/?id=727309536
+  <name>Door Mat (1.7 Vibecoded Port)</name>
+  <packageId>dracoix.doormat.r12a</packageId>
+  <author>dracoix; unofficial 1.7 port by joesobo with Codex</author>
+  <url>https://github.com/joesobo/RimWorld-DoorMat</url>
+  <supportedVersions>
+    <li>1.7</li>
+  </supportedVersions>
+  <description>VIBECODED, UNOFFICIAL RIMWORLD 1.7 PORT
 
-For your cleaning needs.
+AI-assisted port by joesobo with Codex. Compiled against RimWorld 1.7.4985-unstable. In-game testing is pending.
 
-Ported to 1.0, and updated to 1.x by dracoix.
+Original author: Latta. Maintained and updated through 1.6 by dracoix. Filth-dropping support credited to ignis.
+Original mod: https://steamcommunity.com/sharedfiles/filedetails/?id=1505423207
 
-Last Tested: 1.6
-	</description>
+For your cleaning needs. Preserves Dracoix's doormat definitions, filth-dropping behavior, and slow self-cleaning.
+
+Enable this local port in place of the original Door Mat mod. It uses the original package ID and building IDs so existing mats can be recognized. Save migration still needs an in-game test.
+  </description>
 </ModMetaData>
