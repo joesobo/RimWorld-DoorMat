@@ -1,0 +1,26 @@
+name: Build and validate
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-dotnet@v6.0.0
+        with:
+          dotnet-version: '10.0.x'
+      - name: Build for RimWorld 1.7
+        run: |
+          dotnet restore Source/RimWorld-DoorMat.csproj --locked-mode
+          dotnet build Source/RimWorld-DoorMat.csproj -c Release --no-restore
+      - name: Check behavior and the reflected game API
+        run: dotnet run --project Tests/BehaviorChecks.csproj -c Release
+      - name: Check mod content
+        run: python3 tools/validate.py
+      - name: Verify download packaging
+        run: python3 tools/package.py

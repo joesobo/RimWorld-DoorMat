@@ -6,7 +6,7 @@ This updates **Dracoix's Door Mat**, originally by Latta, for RimWorld **1.7.498
 
 ## Download and install
 
-Download **DoorMat-1.7.zip** from the [latest release](https://github.com/joesobo/RimWorld-DoorMat/releases/latest).
+Download **[DoorMat-1.7.zip](https://github.com/joesobo/RimWorld-DoorMat/releases/download/v1.7.0-test.1/DoorMat-1.7.zip)** from the [test release](https://github.com/joesobo/RimWorld-DoorMat/releases/tag/v1.7.0-test.1).
 
 1. Extract the `DoorMat-1.7` folder into your RimWorld installation's `Mods` folder.
 2. Check that `Mods/DoorMat-1.7/About/About.xml` exists. Avoid an extra nested folder.
@@ -32,10 +32,21 @@ This is a 1.7-only port. It has no Harmony dependency.
 Requires the .NET 10 SDK. The game does not need to be installed to compile.
 
 ```sh
-dotnet build Source/RimWorld-DoorMat.csproj -c Release --locked-mode
+dotnet restore Source/RimWorld-DoorMat.csproj --locked-mode
+dotnet build Source/RimWorld-DoorMat.csproj -c Release --no-restore
 ```
 
 The output is `Assemblies/RimWorld-DoorMat.dll`. The NuGet package provides reference signatures; game binaries are not bundled.
+
+From a repository checkout, run the isolated behavior checks and build a download ZIP:
+
+```sh
+dotnet run --project Tests/BehaviorChecks.csproj -c Release
+python3 tools/validate.py
+python3 tools/package.py
+```
+
+The behavior checks use test doubles for the game's map, pawns, and filth tracker. They also inspect the actual 1.7 reference assembly for the private method used by reflection. They cover filth deposits, undroppable filth, multiple pawns, large mats, cleaning intervals, map edges, and missing trackers. They do not establish in-game compatibility. GitHub Actions runs the build and checks on Linux.
 
 ## In-game test checklist
 
