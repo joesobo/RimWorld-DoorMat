@@ -98,7 +98,7 @@ foreach (var (name, run) in cases)
     run();
     Console.WriteLine($"PASS: {name}");
 }
-Console.WriteLine($"{cases.Length} isolated behavior checks passed. In-game testing remains pending.");
+Console.WriteLine($"{cases.Length} isolated behavior checks passed. These checks do not replace in-game testing.");
 
 static Building_DoorMat Mat(params IntVec3[] cells) => new() { Map = new(), Position = cells[0], TestCells = cells };
 static Pawn DirtyPawn(Map map, IntVec3 position)

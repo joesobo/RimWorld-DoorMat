@@ -2,20 +2,24 @@
 <ModMetaData>
   <name>Door Mat (1.7 Vibecoded Port)</name>
   <packageId>dracoix.doormat.r12a</packageId>
-  <author>dracoix; unofficial 1.7 port by joesobo with Codex</author>
+  <author>Latta; maintained by dracoix; unofficial 1.7 port by joesobo with Codex</author>
   <url>https://github.com/joesobo/RimWorld-DoorMat</url>
   <supportedVersions>
     <li>1.7</li>
   </supportedVersions>
-  <description>VIBECODED, UNOFFICIAL RIMWORLD 1.7 PORT
+  <description>Unofficial, vibe-coded port of Door Mat for RimWorld 1.7.
 
-AI-assisted port by joesobo with Codex. Compiled against RimWorld 1.7.4985-unstable. In-game testing is pending.
+Original mod by Latta, maintained through 1.6 by dracoix. Filth-dropping support credited to ignis. The original code, artwork, and gameplay design belong to their respective creators.
 
-Original author: Latta. Maintained and updated through 1.6 by dracoix. Filth-dropping support credited to ignis.
+This compatibility port was made by joesobo with OpenAI Codex assistance and is shared at no charge to help other players. No Steam Workshop publication is planned. It is independent of the original authors and Ludeon Studios.
+
+Targets RimWorld 1.7.4985-unstable. Initial in-game success on Windows was reported by joesobo on October 24, 2026. Full manual coverage and save migration remain unverified. No DLC or Harmony dependency.
+
+Find small and large mats under Architect > Misc. Place them at entrances or along busy paths to collect carried filth. Colored cloth variants require Carpet making research. Mats clean themselves and nearby cells slowly; ordinary cleaning is still useful.
+
+Enable only one version of Door Mat at a time. This port uses the original package ID and building names. Use a new colony or a copy of your save for the first test.
+
 Original mod: https://steamcommunity.com/sharedfiles/filedetails/?id=1505423207
-
-For your cleaning needs. Preserves Dracoix's doormat definitions, filth-dropping behavior, and slow self-cleaning.
-
-Enable this local port in place of the original Door Mat mod. It uses the original package ID and building IDs so existing mats can be recognized. Save migration still needs an in-game test.
+Source, instructions, credits, and reuse terms: https://github.com/joesobo/RimWorld-DoorMat
   </description>
 </ModMetaData>
